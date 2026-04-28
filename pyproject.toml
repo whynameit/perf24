@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perf24"
+version = "0.1.0"
+description = "Continuous 7x24 perf collector with time-point flamegraph export"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "OpenAI Codex" }]
+license = { text = "MIT" }
+keywords = ["perf", "profiling", "flamegraph", "linux"]
+
+[project.scripts]
+perf24 = "perf24.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

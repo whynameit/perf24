@@ -1,0 +1,24 @@
+[paths]
+base_dir = "/mnt/d/perf24"
+data_dir = "/mnt/d/perf24/data"
+run_dir = "/mnt/d/perf24/run"
+log_file = "/mnt/d/perf24/logs/collector.log"
+pid_file = "/mnt/d/perf24/run/perf24.pid"
+output_name = "perf.data"
+
+[collect]
+perf_binary = "/usr/local/bin/perf"
+event = "cpu-clock"
+freq = 29
+call_graph = "fp"
+segment_duration = "1m"
+retain_segments = 2880
+clockid = "CLOCK_REALTIME"
+system_wide = true
+timestamp_boundary = true
+extra_record_args = []
+
+[export]
+include_comm_root = true
+svg_width = 1600
+min_frame_width = 0.1

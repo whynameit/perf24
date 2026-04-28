@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+src/perf24/__init__.py
+src/perf24/cli.py
+src/perf24/collector.py
+src/perf24/config.py
+src/perf24/flamegraph.py
+src/perf24/query.py
+src/perf24/systemd.py
+src/perf24.egg-info/PKG-INFO
+src/perf24.egg-info/SOURCES.txt
+src/perf24.egg-info/dependency_links.txt
+src/perf24.egg-info/entry_points.txt
+src/perf24.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+perf24 = perf24.cli:main
+

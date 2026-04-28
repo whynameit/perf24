@@ -1,0 +1,17 @@
+[Unit]
+Description=Continuous 7x24 perf CPU sampler
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=perf24 run --config /etc/perf24.toml
+Restart=always
+RestartSec=5
+KillSignal=SIGINT
+TimeoutStopSec=30
+Environment=LC_ALL=C
+Environment=LANG=C
+WorkingDirectory=/
+
+[Install]
+WantedBy=multi-user.target
