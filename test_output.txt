@@ -1,0 +1,12 @@
+test_build_record_command_contains_rotation_flags (test_config.ConfigTests) ... ok
+test_parse_duration_minutes (test_config.ConfigTests) ... ok
+test_render_svg_contains_labels (test_flamegraph.FlamegraphTests) ... ok
+test_parse_perf_script_stacks (test_query.QueryTests) ... ok
+test_parse_perf_timestamp_from_name (test_query.QueryTests) ... ok
+test_select_segments (test_query.QueryTests) ... ok
+test_write_folded (test_query.QueryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.018s
+
+OK

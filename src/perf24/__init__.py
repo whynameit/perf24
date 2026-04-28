@@ -1,5 +1,3 @@
-from .query import parse_time, ensure_layout, parse_perf_script_samples
-from .flamegraph import build_flame_tree, render_flamegraph_svg
-from .collector import build_record_command
-import collections
-Counter = collections.Counter
+"""perf24 – 7x24 CPU profiling collector."""
+
+__version__ = "0.1.0"
