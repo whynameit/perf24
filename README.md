@@ -2,35 +2,42 @@
 
 `perf24` 是一个面向 Linux 服务器的 7x24 持续 CPU Profiling 采集工具。
 ## 项目结构
+
+```
 perf24/
 ├── src/
 │   └── perf24/
-│       ├── init.py        # 版本号定义
-│       ├── cli.py             # 命令行入口，定义所有子命令
-│       ├── collector.py       # 采集核心：启动/停止 perf，管理后台进程
-│       ├── config.py          # 配置文件解析（TOML格式），定义所有默认参数
-│       ├── flamegraph.py      # SVG 火焰图渲染器，纯 Python 实现无外部依赖
-│       ├── query.py           # 时间点检索：扫描分片索引，解析 perf script 输出
-│       └── systemd.py         # 生成 systemd service 单元文件
+│       ├── __init__.py       # 版本号定义
+│       ├── cli.py            # 命令行入口，定义所有子命令
+│       ├── collector.py      # 采集核心：启动/停止 perf，管理后台进程
+│       ├── config.py         # 配置文件解析（TOML格式），定义所有默认参数
+│       ├── flamegraph.py     # SVG 火焰图渲染器，纯 Python 实现无外部依赖
+│       ├── query.py          # 时间点检索：扫描分片索引，解析 perf script 输出
+│       └── systemd.py        # 生成 systemd service 单元文件
 ├── tests/
-│   ├── test_config.py         # 测试配置解析和 perf 命令行构建
-│   ├── test_flamegraph.py     # 测试 SVG 火焰图渲染逻辑
-│   ├── test_query.py          # 测试时间片检索和调用栈解析
-│   └── test_perf24.py         # 集成测试（整体流程验证）
+│   ├── test_config.py        # 测试配置解析和 perf 命令行构建
+│   ├── test_flamegraph.py    # 测试 SVG 火焰图渲染逻辑
+│   ├── test_query.py         # 测试时间片检索和调用栈解析
+│   └── test_perf24.py        # 集成测试（整体流程验证）
 ├── systemd/
-│   └── perf24.service         # systemd 服务模板（生产部署用）
-└── README.md                  # 使用说明与设计说明
+│   └── perf24.service        # systemd 服务模板（生产部署用）
+└── README.md                 # 使用说明与设计说明
+```
 
-### 数据目录结构（运行时生成）
+### 运行时数据目录结构
+
+```
 /var/lib/perf24/
-├── data/                      # perf 原始采样数据
-│   ├── perf.data.20260428T145100
-│   ├── perf.data.20260428T145200
-│   └── ...                    # 每分钟一个分片，自动滚动覆盖旧文件
+├── data/                          # perf 原始采样数据
+│   ├── perf.data.20260428T145100  # 每分钟一个分片
+│   ├── perf.data.20260428T145200  # 自动滚动覆盖旧文件
+│   └── ...
 └── logs/
-└── collector.log          # 采集进程日志
+    └── collector.log              # 采集进程日志
+
 /var/run/perf24/
-└── perf24.pid                 # 后台进程 PID 文件
+└── perf24.pid                     # 后台进程 PID 文件
+```
 
 
 ## 设计说明
