@@ -1,0 +1,13 @@
+  1.项目代码
+https://github.com/whynameit/perf24
+  2.提交记录
+https://github.com/whynameit/perf24/commits/main
+  3.README文档
+https://github.com/whynameit/perf24/blob/main/README.md
+  4.可运行测试及执行结果
+https://github.com/whynameit/perf24/tree/main/tests
+https://github.com/whynameit/perf24/blob/main/test_output.txt
+  5.完整AI聊天记录
+https://claude.ai/share/42359b27-35e6-468a-bff7-8dd5cf05bb05
+  6.腾讯会议
+https://meeting.tencent.com/crm/2MVbAjo614
